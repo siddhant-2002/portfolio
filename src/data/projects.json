@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Refer Me",
+    "imageSrc": "projects/project.png",
+    "description": "An online platform for engineering students, built using the MERN stack and utilizing Firebase and MongoDB for database storage",
+    "skills": ["React", "Express", "Node","Mongo DB","Firebase"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Todo List",
+    "imageSrc": "projects/project.png",
+    "description": "This is the simple To-Do list created with MERN technologies and utilizing MongoDB for database storage to track our todos.",
+    "skills": ["React", "Express", "Node","Mongo DB"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "WEATHER APP",
+    "imageSrc": "projects/project.png",
+    "description": "It is a Node.js server application that fetches real-time weather data using OpenWeatherMap API and displays it on a web page.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+]

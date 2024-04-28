@@ -1,0 +1,13 @@
+:root {
+  /* Colours */
+  --color-text: #ffffff;
+  --color-primary: #1a237e; /* Dark blue */
+  --color-secondary: transparent; /* Dark purple */
+  --color-dark: #1b5e20; /* Dark green */
+  --color-bg: #090a17; /* Dark brown */
+
+  /* Fonts */
+  --font-roboto: "Roboto", sans-serif;
+  --font-fancy: "Pacifico", cursive; /* Add a fancy font */
+}
+

@@ -1,0 +1,21 @@
+@import "../../vars.css";
+
+.container {
+  padding: 20px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.socialMedia a {
+  margin: 0 10px;
+}
+
+.socialMedia img {
+  width: 30px;
+  height: 30px;
+}
+
+.copyright {
+  margin-top: 10px;
+  color: white;
+}

@@ -1,0 +1,30 @@
+[
+    {
+      "role": "Management Lead",
+      "organisation": "GOOGLE DSC SCOE ",
+      "startDate": "August 2023 - April 2024 | SCOE Pune",
+      "endDate": "",
+      "experiences": [" I led workshops and events on machine learning, web development, and cloud computing.", " I have collaborated with a development team to create full-stack web development projects."],
+      "imageSrc": "community/gdsc.png"
+    },
+    {
+        "role": "Electric guitarist",
+        "organisation": "SCOE ARTCIRCLE",
+        "startDate": "November 2022 - Present | SCOE Pune",
+        "endDate": "",
+        "experiences": ["part of best music team in Firodiya Karandak 2022-23.", " Done 4 professional theater shows with the team of 33 people"],
+        "imageSrc": "community/artcircle.png"
+    },
+    {
+        "role": "Prayas Volunteer",
+        "organisation": "Prayas Youth Forum",
+        "startDate": "Nov 2023 - present | SCOE Pune",
+        "endDate": "",
+        "experiences": ["During the annual camp organized by PYF, we visited a village to teach children about computer literacy, personality development, and women empowerment."],
+        "imageSrc": "community/prayas.png"
+    }
+       
+     
+   
+  ]
+  
