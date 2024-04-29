@@ -7,8 +7,9 @@
   padding: 73px;
   margin-top: 129px;
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  margin: 5%;
   border: 3px solid;
   border-color: rgb(27, 218, 141);
 }
