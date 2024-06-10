@@ -29,7 +29,7 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Dsa Problem Solver</h3>
               <p>
-                I have solver 250+ problems on various coding platforms including leetcode, code chef and coding ninjas.
+                I have solver 350+ problems on various coding platforms including leetcode, code chef and coding ninjas.
               </p>
             </div>
           </li>

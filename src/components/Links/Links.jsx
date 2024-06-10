@@ -13,12 +13,12 @@ export const Links = () => {
         <div className={styles.skills}>
           {skills.map((skill, id) => {
             return (
-              <div key={id} className={styles.skill}>
+              <a key={id} href={skill.link} className={styles.skill}>
                 <div className={styles.skillImageContainer}>
-                  <img src={getImageUrl(skill.imageSrc)} alt={skill.title} href={skill.link} />
+                  <img src={getImageUrl(skill.imageSrc)} alt={skill.title}  />
                 </div>
                 <p>{skill.title}</p>
-              </div>
+              </a>
             );
           })}
         </div>

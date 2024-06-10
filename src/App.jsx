@@ -1,6 +1,6 @@
 import styles from "./App.module.css";
 import { About } from "./components/About/About";
-import { Contact } from "./components/Contact/Contact";
+import { Footer } from "./components/Footer/Footer";
 import { Experience } from "./components/Experience/Experience";
 import { Hero } from "./components/Hero/Hero";
 import { Navbar } from "./components/Navbar/Navbar";
@@ -10,6 +10,7 @@ import {Skills} from "./components/Skills/Skills"
 import { Coursework } from "./components/Coursework/Coursework";
 import { Community } from "./components/Community/Community";
 import { Links } from "./components/Links/Links";
+import { Contact } from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       <Coursework/>
       <Community/>
       <Links/>
-      <Contact />
+      <Contact/>
+      <Footer />
     </div>
   );
 }

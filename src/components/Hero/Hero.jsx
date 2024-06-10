@@ -12,9 +12,9 @@ export const Hero = () => {
           <p className={styles.description}>
             I'm a Engineer with 1 year of experience Web Developement. Reach out if you'd like to learn more!
           </p>
-          <span  className={styles.contactBtn}>
+          <a href="https://drive.google.com/file/d/1mVJLPYmKGeOdU6gPz3BbYge1x7Zg9T66/view?usp=drive_link" className={styles.contactBtn}> 
             Know More...!
-          </span>
+          </a>
         </div>
         <img
           src={getImageUrl("hero/heroImage.png")}
