@@ -21,7 +21,6 @@
     justify-content: space-between;
   } */
 
-
 .container {
 	max-width: 75%;
 	padding: 0 20px;
@@ -77,13 +76,26 @@
 }
 
 .button {
-    margin-top: 16px;
-    border: 1px solid rgb(115, 98, 213);
-    background-color: rgb(62 0 161); /* Tomato color */
-    padding: 8px 16px;
-    border-radius: 4px;
+	margin-top: 16px;
+	border: 1px solid rgb(115, 98, 213);
+	background-color: rgb(62 0 161); /* Tomato color */
+	padding: 8px 16px;
+	border-radius: 4px;
 }
 
 .button:hover {
 	border: 1px solid purple;
+}
+
+@media screen and (max-width: 830px) {
+	.container {
+		flex-direction: column-reverse;
+	}
+
+	.content {
+		align-items: center;
+	}
+	.flex-container {
+		flex-direction: column;
+	}
 }
