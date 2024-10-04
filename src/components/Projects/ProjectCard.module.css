@@ -2,31 +2,40 @@
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border-radius: 20px;
   /* background-color: rgba(255, 255, 255, 0.3);  */
   backdrop-filter: blur(10px); /* Apply blur */
-  transition: all 0.3s ease; /* Smooth transition */
-  box-shadow: 0 16px 14px 0 #04152d;
+
   padding: 2em;
-  max-width: 345px;
+  /* max-width: 345px; */
  
 }
 
-.container:hover {
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1em;
+  }
+}
+
+/* .container:hover {
   transform: scale(1.05);
   background: linear-gradient(180deg, rgba(87,108,188,0.1) 0%, rgba(19,42,83,0.1) 100%);
   border: 3px solid blue; 
-}
+} */
 
 .image {
   margin-bottom: 26px;
   transition: transform 0.3s ease-in-out;
+  width: 80%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 
-.image:hover {
+/* .image:hover {
   transform: scale(1.1);
-}
+} */
 
 .title {
   font-size: 25px;
@@ -35,6 +44,7 @@
 }
 
 .description {
+  display: block;
   margin-top: 6px;
   font-size: 25px;
   font-weight: 400;
@@ -87,4 +97,17 @@
 .link:hover {
   border: 1px solid rgb(80, 80, 223);
   color: #fff;
+}
+
+.div1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.div2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -1,26 +1,59 @@
 [
+
   {
     "title": "Refer Me",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/referme.png",
     "description": "An online platform for engineering students, built using the MERN stack and utilizing Firebase and MongoDB for database storage",
-    "skills": ["React", "Express", "Node","Mongo DB","Firebase"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Todo List",
-    "imageSrc": "projects/project.png",
-    "description": "This is the simple To-Do list created with MERN technologies and utilizing MongoDB for database storage to track our todos.",
-    "skills": ["React", "Express", "Node","Mongo DB"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "WEATHER APP",
-    "imageSrc": "projects/project.png",
-    "description": "It is a Node.js server application that fetches real-time weather data using OpenWeatherMap API and displays it on a web page.",
-    "skills": ["React", "Express", "Node"],
+    "skills": [
+      "React",
+      "Express",
+      "Node",
+      "Mongo DB",
+      "Firebase"
+    ],
     "demo": "https://www.example.com",
     "source": "https://www.github.com"
   }
+  ,
+  
+    {
+      "title": "DevLink-Connect",
+      
+      "imageSrc": "projects/devlink.png",
+      "description": 
+        "A developer connection platform to facilitate networking among coding professionals."
+      ,
+      "skills": [
+      "React",
+      "Express",
+      "Node",
+      "Mongo DB",
+      "Firebase"
+    ],
+      "demo": "[Link]",
+      "source": "[Link]"
+    },
+    {
+      "title": "OSimulate",
+      
+      "imageSrc": "projects/osimulate.png",
+      "description": 
+        "Developed a simulation of key operating system algorithms in C++."
+      ,
+      "skills": ["C++"],
+      "demo": "[Link]",
+      "source": "[Link]"
+    },
+    {
+      "title": "WEATHER APP",
+      "imageSrc": "projects/weather.png",
+      "description": "It is a Node.js server application that fetches real-time weather data using OpenWeatherMap API and displays it on a web page.",
+      "skills": ["React", "Express", "Node"],
+      "demo": "https://www.example.com",
+      "source": "https://www.github.com"
+    }
+  
 ]
+
+
+
