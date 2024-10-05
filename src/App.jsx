@@ -11,6 +11,7 @@ import { Coursework } from "./components/Coursework/Coursework";
 import { Community } from "./components/Community/Community";
 import { Links } from "./components/Links/Links";
 import { Contact } from "./components/Contact/Contact";
+// import {Studies} from "./components/Studies/Studies"
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Hero />
       <About />
       <Skills/>
-
+      {/* <Studies/> */}
       <Experience />
       <Projects />
       <Achievements/>

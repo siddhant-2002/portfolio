@@ -1,0 +1,75 @@
+@import "../../vars.css";
+
+.container {
+	/* width: 100%; */
+	margin-top: 76px;
+	color: var(--color-text);
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.title {
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: 1.75px;
+	text-transform: uppercase;
+}
+.school {
+	font-size: 30px;
+	font-weight: 300;
+	letter-spacing: 1.75px;
+	/* text-transform: uppercase; */
+}
+
+.title1 {
+	font-size: 25px;
+	/* font-weight: 100; */
+	/* letter-spacing: 1.75px; */
+	/* text-transform: uppercase; */
+}
+
+.projects {
+	margin-top: 37px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	width: 100%;
+}
+
+.slide {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin: 10px;
+	max-width: 400px;
+	text-align: center;
+}
+
+.div1 {
+	display: block;
+	width: 50%;
+	height: auto;
+	border: 3px solid rgb(48, 228, 210) ;
+	border-radius: 50px;
+	padding: 3%;
+}
+
+.section{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	padding: 2%;
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }
+}
