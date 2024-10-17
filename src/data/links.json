@@ -24,6 +24,10 @@
       "imageSrc": "links/linkdin.png",
       "link":"https://www.linkedin.com/in/siddhant-deshmukh-7130a2222/"
     }
-    
+    ,{
+      "title": "CodeForces",
+      "imageSrc": "links/codeforces.png",
+      "link":"https://codeforces.com/profile/sid_2002"
+    }
   ]
   
