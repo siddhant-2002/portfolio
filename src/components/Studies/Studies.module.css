@@ -84,6 +84,40 @@
 
 @media (max-width: 768px) {
     .section {
-        flex-direction: column;
+        display: flex; 
+	flex-direction: column;
+	width: 100%;
+	gap: 20px;
+	padding: 2%;
     }
+	.div2{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+	}
+	.div1 {
+		display: block;
+		width: 100%;
+		height: auto;
+		border: 3px solid rgb(48, 228, 210) ;
+		border-radius: 50px;
+		padding: 10%;
+		margin: 2%;
+	}
+	.diva{
+		display: block;
+		/* width: 50%; */
+		height: auto;
+		border: 3px solid rgb(48, 228, 210) ;
+		border-radius: 50px;
+		padding: 10%;
+	}
 }
+/* @media (min-width: 769px) and (max-width: 1200px) {
+    .section {
+        flex-direction: row;
+        gap: 15px;
+        padding: 3%;
+    }
+} */
