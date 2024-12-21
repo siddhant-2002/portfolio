@@ -34,6 +34,24 @@
   {
     "title": "My SQL",
     "imageSrc": "skills/mysql.png"
+  },{
+    "title": "C++",
+    "imageSrc": "skills/cpp.png"
+  },
+  {
+    "title": "Java",
+    "imageSrc": "skills/java.png"
+  },
+  {
+    "title": "Linux",
+    "imageSrc": "skills/linux.png"
+  },
+  {
+    "title": "Firebase",
+    "imageSrc": "skills/firebase.png"
+  },{
+    "title": "Python",
+    "imageSrc": "skills/python.png"
   }
   
 ]

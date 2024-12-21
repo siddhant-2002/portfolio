@@ -9,7 +9,7 @@
   z-index: 1;
   /* margin-left: 10%;
   margin-right: 10%; */
-  padding: 7%;
+  padding: 5%;
 }
 
 .content {
@@ -63,7 +63,6 @@
 .heroImg {
   width: 80%;
   z-index: 1;
-
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -86,8 +85,8 @@
   position: absolute;
   width: 50vw;
   height: 50vw;
-  min-width: 350px;
-  min-width: 350px;
+  min-width: 300px;
+  min-width: 300px;
   top: -128px;
   left: -10vw;
   border-radius: 764px;
@@ -100,8 +99,8 @@
   position: absolute;
   width: 70vw;
   height: 50vw;
-  min-width: 350px;
-  min-width: 250px;
+  min-width: 300px;
+  min-width: 200px;
   top: 246px;
   right: -25vw;
   border-radius: 764px;
