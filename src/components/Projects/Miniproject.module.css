@@ -5,7 +5,7 @@
   flex-direction: column;
   border-radius: 20px;
   backdrop-filter: blur(10px); /* Apply blur */
-  padding: 2em;
+  /* padding: 2em;/ */
 }
 
 /* Responsive styles */
