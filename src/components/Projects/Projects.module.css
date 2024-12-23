@@ -24,3 +24,27 @@
   gap: 2em;
   width: 100%;
 }
+
+.minp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  width: calc(30% - 15px);
+
+  height: 250px;
+
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

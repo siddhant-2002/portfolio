@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Music App",
+    "imageSrc": "projects/music.jpeg",
+    "link": "https://github.com/yourusername/music_application"
+  },
+  {
+    "title": "Todo List",
+    "imageSrc": "projects/todo.jpeg",
+    "link": "https://github.com/yourusername/simple_todo_list"
+  },
+  {
+    "title": "Calculator",
+    "imageSrc": "projects/calc.jpeg",
+    "link": "https://github.com/yourusername/simple_calculator"
+  },
+  {
+    "title": "React Counter",
+    "imageSrc": "projects/counter.png",
+    "link": "https://github.com/yourusername/counter_react_app"
+  },
+  {
+    "title": "Dice Game",
+    "imageSrc": "projects/dice.jpg",
+    "link": "https://github.com/yourusername/dice_game"
+  },
+  {
+    "title": "Drums",
+    "imageSrc": "projects/drums.jpeg",
+    "link": "https://github.com/yourusername/drums"
+  },
+  {
+    "title": "Rock-Paper",
+    "imageSrc": "projects/sps.jpeg",
+    "link": "https://github.com/yourusername/stone_paper_scissors"
+  }
+]
