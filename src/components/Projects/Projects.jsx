@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "./Projects.module.css";
 import projects from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
-import { Miniproject } from "./miniProject";
+import { Miniproject } from "./Miniproject";
 import minprojects from "../../data/minprojects.json";
 
 
