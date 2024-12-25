@@ -5,7 +5,7 @@ import { getImageUrl } from "../../utils";
 export const Miniproject = ({ project: { title, imageSrc,link } }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.div1}>
+      {/* <div className={styles.div1}> */}
         <img
           src={getImageUrl(imageSrc)}
           alt={`Image of ${title}`}
@@ -17,7 +17,7 @@ export const Miniproject = ({ project: { title, imageSrc,link } }) => {
             Demo
           </span>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };

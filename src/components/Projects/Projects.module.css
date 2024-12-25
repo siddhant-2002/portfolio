@@ -46,3 +46,21 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .project-card {
+    width: calc(33.33% - 15px); /* Three cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 15px); /* Two cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%; /* One card per row */
+  }
+}
