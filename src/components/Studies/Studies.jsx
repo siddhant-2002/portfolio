@@ -17,7 +17,7 @@ export const Studies = () => {
             <div className={styles.section}>
 
                 <div className={styles.diva}>
-                    <p className={styles.title}>Batcholors</p>
+                    <p className={styles.title}>Bachelor's</p>
                     <br />
                     <p className={styles.school}>Sinhgad College Of Engineering, Pune</p>
                     <br />
