@@ -10,7 +10,7 @@
       "Mongo DB",
       "Firebase"
     ],
-    "demo": "https://www.example.com",
+    "demo": "https://referme.netlify.app/",
     "source": "https://www.github.com"
   },
   {
@@ -24,7 +24,7 @@
       "Mongo DB",
       "Firebase"
     ],
-    "demo": "[Link]",
+    "demo": "https://devlink-connect.netlify.app/",
     "source": "[Link]"
   },
   {
@@ -34,7 +34,7 @@
     "skills": [
       "C++"
     ],
-    "demo": "[Link]",
+    "demo": "https://github.com/siddhant-2002/OSimulate",
     "source": "[Link]"
   },
   {
@@ -48,7 +48,7 @@
       "React",
       "Giphy API"
     ],
-    "demo": "https://www.example.com",
+    "demo": "https://randoom-gif.netlify.app/",
     "source": "https://www.github.com"
   },
   {
