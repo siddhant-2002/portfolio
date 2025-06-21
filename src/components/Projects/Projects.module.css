@@ -1,66 +1,28 @@
 @import "../../vars.css";
 
 .container {
-  margin-top: 76px;
-  color: var(--color-text);
-  margin-left: 10%;
-  margin-right: 10%;
+  padding: var(--section-padding);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  max-width: var(--section-max-width);
+  margin: var(--section-margin);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  letter-spacing: var(--title-spacing);
+  text-transform: var(--title-transform);
+  margin: var(--title-margin);
+  color: var(--color-text-primary);
+  text-align: center;
 }
 
-.projects {
-  margin-top: 37px;
+.grid {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  gap: var(--space-8);
   justify-content: center;
-  gap: 2em;
-  width: 100%;
-}
-
-.minp {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  width: calc(30% - 15px);
-  /* height: 250px; */
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-/* Responsive styles */
-@media (max-width: 1200px) {
-  .project-card {
-    width: calc(33.33% - 15px); /* Three cards per row */
-  }
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    width: calc(50% - 15px); /* Two cards per row */
-  }
-}
-
-@media (max-width: 480px) {
-  .project-card {
-    width: 100%; /* One card per row */
-  }
 }

@@ -2,84 +2,97 @@
 
 .container {
   position: relative;
-  background-color: rgba(12, 12, 12, 0.6);
-  border-radius: 15px;
-  padding: 5%;
-  margin-top: 129px;
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  margin: var(--section-margin);
   z-index: 1;
-  /* margin-left: 10%;
-  margin-right: 10%; */
-  margin: 5%;
-  border: 3px solid;
-  border-color: rgb(27, 218, 141);
-  
-  
+  max-width: var(--section-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid var(--color-accent);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(12px);
 }
 
 .title {
-  color: var(--color-text);
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+  color: var(--color-text-primary);
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  letter-spacing: var(--title-spacing);
+  text-transform: var(--title-transform);
+  margin-bottom: var(--space-8);
+  text-align: center;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: var(--space-12);
 }
 
 .aboutImage {
   width: 35%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
 }
 
 .aboutItems {
-  color: var(--color-text);
+  color: var(--color-text-primary);
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: var(--space-12);
+  flex: 1;
 }
 
 .aboutItem {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 20px;
+  border-radius: var(--radius-2xl);
   list-style: none;
-  padding: 25px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(165, 215, 232, 0.42) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: 0.4s;
+  padding: var(--space-6);
+  background: var(--card-bg);
+  border: 1px solid var(--color-border-secondary);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(8px);
 }
 
 .aboutItem:hover {
-  background-size: 100% 100%;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 234, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
 }
 
 .aboutItem h3 {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
 }
 
 .aboutItem p {
-  font-size: 25px;
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
 }
 
 @media screen and (max-width: 830px) {
   .container {
-    background-color: transparent;
-    /* padding-left: 0;
-    padding-right: 0; */
+    margin: var(--space-8) var(--space-4);
+    padding: var(--space-6);
   }
 
   .content {
     flex-direction: column;
+    gap: var(--space-8);
   }
 
   .aboutImage {
@@ -87,11 +100,19 @@
   }
 
   .aboutItems {
-    margin-top: 29px;
+    margin-top: var(--space-6);
+    gap: var(--space-6);
   }
 
   .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+    padding: var(--space-4);
+  }
+
+  .aboutItem h3 {
+    font-size: var(--text-xl);
+  }
+
+  .aboutItem p {
+    font-size: var(--text-base);
   }
 }

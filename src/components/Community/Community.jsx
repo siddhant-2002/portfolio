@@ -19,9 +19,11 @@ export const Community = () => {
                   alt={`${historyItem.organisation} Logo`}
                 />
                 <div className={styles.historyItemDetails}>
-                  <h3>{`${historyItem.role}, `}</h3>
-                  <h3>{`${historyItem.organisation}`}</h3>
-                  <p>{`${historyItem.startDate}`}</p>
+                  <div>
+                    <h3>{historyItem.role}</h3>
+                    <h3>{historyItem.organisation}</h3>
+                  </div>
+                  <p>{historyItem.startDate}</p>
                   <ul>
                     {historyItem.experiences.map((experience, id) => {
                       return <li key={id}>{experience}</li>;

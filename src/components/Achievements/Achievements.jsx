@@ -20,21 +20,22 @@ export const Achievements = () => {
               <h3> PROGRAMMING | Problem solving</h3>
               <p>
                 • Secured Global Rank 933(Div-4) in CodeChef Starters 130.
-                • Solved 350+ DSA Problems on Various Coding Platforms.<br />
-                • 4-Star c++ Coder on HackerRank.
+                <br />
+                • Solved 350+ DSA Problems on Various Coding Platforms.
+                <br />• 4-Star c++ Coder on HackerRank.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
 
-
             <div className={styles.aboutItemText}>
               <h3> OPENSOURCE CONTRIBUTION | Hacktoberfest | GSSOC'24</h3>
               <p>
-                • Hacktober Fest: Strengthened coding skills and gained experience in collaborative development.
-
-                • GSSOC’24: Developed technical skill sand gained valuable experience in web development and collaboration.
+                • Hacktober Fest: Strengthened coding skills and gained
+                experience in collaborative development.
+                <br />• GSSOC’24: Developed technical skill sand gained valuable
+                experience in web development and collaboration.
               </p>
             </div>
           </li>
@@ -43,13 +44,12 @@ export const Achievements = () => {
             <div className={styles.aboutItemText}>
               <h3>COGNIZANT GENCTECHNOVERSE | Digital Nurture Hackathon</h3>
               <p>
-                • Engaged in the Cognizant Hackathon reached the semifinal level, Under
-                mentor guidance. our team worked on the Domain of Machine learning in
-                HealthCare.
+                • Engaged in the Cognizant Hackathon reached the semifinal
+                level, Under mentor guidance. our team worked on the Domain of
+                Machine learning in HealthCare.
               </p>
             </div>
           </li>
-
         </ul>
       </div>
     </section>

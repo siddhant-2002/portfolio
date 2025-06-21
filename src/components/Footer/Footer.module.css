@@ -1,21 +1,75 @@
 @import "../../vars.css";
 
 .container {
-  padding: 20px;
+  padding: var(--space-8) var(--space-4) var(--space-4) var(--space-4);
   text-align: center;
-  background-color: transparent;
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  margin-top: var(--space-10);
+  background: var(--card-bg);
+  border-top: 2px solid var(--color-border-secondary);
+  backdrop-filter: blur(12px);
+  max-width: var(--section-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-5);
 }
 
 .socialMedia a {
-  margin: 0 10px;
+  display: inline-block;
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-full);
+  padding: var(--space-2);
+  background: var(--color-bg-glass);
+  border: 1px solid var(--color-border-secondary);
+}
+
+.socialMedia a:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: var(--shadow-glow-primary);
+  border-color: var(--color-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 234, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
 }
 
 .socialMedia img {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid var(--color-border-secondary);
+  margin: var(--space-5) 0 var(--space-3) 0;
 }
 
 .copyright {
-  margin-top: 10px;
-  color: white;
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  letter-spacing: 0.03em;
+  font-family: var(--font-primary);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: var(--space-6) var(--space-2) var(--space-2) var(--space-2);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+  .socialMedia {
+    gap: var(--space-4);
+  }
+  .socialMedia img {
+    width: 28px;
+    height: 28px;
+  }
 }

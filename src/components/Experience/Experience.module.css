@@ -1,96 +1,213 @@
 @import "../../vars.css";
 
 .container {
-  color: var(--color-text);
-  margin-top: 79px;
-  margin-left: 10%;
-  margin-right: 10%;
+  color: var(--color-text-primary);
+  margin: var(--section-margin);
+  max-width: var(--section-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--space-6);
 }
 
 .title {
-  color: var(--color-text);
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+  color: var(--color-text-primary);
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  letter-spacing: var(--title-spacing);
+  text-transform: var(--title-transform);
+  margin-bottom: var(--space-8);
+  text-align: center;
 }
 
 .content {
   justify-content: space-evenly;
-  margin-top: 14px;
-  padding: 5%;
+  margin-top: var(--space-8);
+  padding: var(--space-6);
 }
 
-
 .skillImageContainer {
-  background-color: var(--color-secondary);
-  border-radius: 100%;
+  background: var(--color-bg-glass);
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 150px;
   height: 150px;
+  border: 2px solid var(--color-border-primary);
+  transition: all var(--transition-normal);
+}
+
+.skillImageContainer:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow-primary);
 }
 
 .skillImageContainer img {
   width: 75px;
+  transition: transform var(--transition-normal);
+}
+
+.skillImageContainer:hover img {
+  transform: scale(1.1);
 }
 
 .skill p {
-  font-size: 25px;
-  font-family: var(--font-roboto);
-  font-weight: 500;
+  font-size: var(--text-2xl);
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: var(--space-3);
 }
 
-.history {
-  width: 59%;
+.timeline {
+  position: relative;
+  margin: var(--space-10) 0 0 0;
+  padding-left: var(--space-10);
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--space-16);
 }
 
-.historyItem {
+.timelineItem {
+  position: relative;
   display: flex;
-  flex-direction: row;
+  align-items: flex-start;
+  min-height: 120px;
+}
+
+.timelineLine {
+  position: absolute;
+  left: var(--space-6);
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  z-index: 0;
+  border-radius: var(--radius-sm);
+}
+
+.timelineDot {
+  position: absolute;
+  left: -8px;
+  top: -4px;
+  width: 80px;
+  height: 80px;
+  background: var(--color-bg-primary);
+  border: 8px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  display: flex;
   align-items: center;
-  gap: 17px;
-  background: #19376d;
-  background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
-  border-radius: 10px;
-  padding: 24px;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: var(--shadow-glow-primary);
+  transition: all var(--transition-normal);
 }
 
-.historyItem img {
-  width: 100px;
+.timelineDot:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-glow-primary);
 }
 
-.historyItemDetails {
-  font-family: var(--font-roboto);
+.timelineLogo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: var(--radius-full);
 }
 
-.historyItemDetails h3 {
-  font-size: 30px;
-  font-weight: 500;
+.timelineContent {
+  background: var(--card-bg);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-8) var(--space-8) var(--space-5) var(--space-12);
+  margin-left: var(--space-10);
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-normal);
 }
 
-.historyItemDetails p {
-  font-size: 20px;
-  font-weight: 300;
+.timelineContent:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-accent);
+  background: linear-gradient(
+    90deg,
+    rgba(48, 228, 210, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
 }
 
-.historyItemDetails ul {
-  margin-top: 6px;
+.org {
+  color: var(--color-accent);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-1);
+  font-family: var(--font-primary);
+}
+
+.role {
+  color: var(--color-text-primary);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-2);
+  font-family: var(--font-primary);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-base);
+  flex-wrap: wrap;
+}
+
+.location {
+  color: var(--color-primary);
+  font-weight: var(--font-normal);
+  font-family: var(--font-primary);
+}
+
+.date {
+  color: var(--color-primary);
+  font-weight: var(--font-normal);
+  font-family: var(--font-primary);
+}
+
+.experienceList {
+  margin-top: var(--space-2);
   list-style-position: inside;
-  font-size: 25px;
+  font-size: var(--text-base);
   list-style-type: disc;
-  margin-left: 17px;
+  margin-left: var(--space-4);
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
+}
+
+.experienceList li {
+  margin-bottom: var(--space-3);
+  line-height: var(--leading-relaxed);
 }
 
 @media screen and (max-width: 830px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+
   .content {
     flex-direction: column;
     align-items: center;
-    gap: 34px;
+    gap: var(--space-8);
   }
 
   .skills {
@@ -99,8 +216,45 @@
     justify-content: center;
   }
 
-  .history {
-    width: 100%;
-    gap: 9px;
+  .timeline {
+    padding-left: 0;
+    gap: var(--space-8);
+  }
+
+  .timelineItem {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100px;
+  }
+
+  .timelineLine {
+    left: var(--space-4);
+  }
+
+  .timelineDot {
+    left: -4px;
+    top: 0px;
+    width: 60px;
+    height: 60px;
+    border-width: 6px;
+  }
+
+  .timelineContent {
+    margin-left: 0;
+    padding-left: var(--space-10);
+    padding-right: var(--space-5);
+  }
+
+  .timelineLogo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .org {
+    font-size: var(--text-xl);
+  }
+
+  .role {
+    font-size: var(--text-base);
   }
 }

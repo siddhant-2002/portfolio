@@ -14,9 +14,8 @@ export const Coursework = () => {
           {skills.map((skill, id) => {
             return (
               <div key={id} className={styles.skill}>
-                <button className="button">
+                
                   <p>{skill.title}</p>
-                </button>
                 
               </div>
             );
