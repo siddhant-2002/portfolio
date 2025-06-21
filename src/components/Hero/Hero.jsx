@@ -18,13 +18,13 @@ export const Hero = () => {
             solving real-world problems through code.
           </p>
           <div className={styles.buttonContainer}>
-            <Link
+            <a
               className={styles.heroButton}
-              to="/projects"
+              href="#projects"
               aria-label="Explore My Work"
             >
               🔗 Explore My Work
-            </Link>
+            </a>
             <a
               className={styles.heroButton}
               href="https://drive.google.com/file/d/1APwZfvoo2XfJhVL4c4-5GeK1UqHLHDyF/view?usp=sharing"

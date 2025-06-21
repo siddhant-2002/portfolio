@@ -21,6 +21,7 @@ export const Community = () => {
                 <div className={styles.historyItemDetails}>
                   <div>
                     <h3>{historyItem.role}</h3>
+                    <span> |</span>
                     <h3>{historyItem.organisation}</h3>
                   </div>
                   <p>{historyItem.startDate}</p>

@@ -28,7 +28,7 @@ function App() {
               <Skills />
               <Studies />
               <Experience />
-              <Projects/>
+              <Projects />
               <Achievements />
               <Coursework />
               <Community />
@@ -38,7 +38,6 @@ function App() {
             </>
           }
         />
-        <Route path="/projects" element={<Projects />} />
       </Routes>
     </div>
   );
