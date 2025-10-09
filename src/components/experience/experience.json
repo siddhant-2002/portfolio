@@ -1,0 +1,25 @@
+[
+  {
+    "role": "Web Development Intern",
+    "organisation": "RN Web Brand Solutions",
+    "startDate": "September 2023 - January 2024 | Pune, Maharashtra",
+    "endDate": "",
+    "experiences": [
+      "Built responsive UIs with React.js, creating 20+ reusable components, reducing development time by 30%.",
+      "Improved responsiveness by 40% using third-party APIs and optimized state management.",
+      "Transformed wireframes into features, collaborating cross-functionally to increase user engagement by 15%."
+    ],
+    "imageSrc": "history/rn.png"
+  },
+  {
+    "role": "Packaged App Development Intern",
+    "organisation": "Accenture",
+    "startDate": "April 2025 - July 2025 | Pune, Maharashtra",
+    "endDate": "",
+    "experiences": [
+      "Built a web app using React.js and Flask to predict Customer Lifetime Value (CLV) based on purchase history.",
+      "Used the Lifetimes Python library with models like BG/NBD and Gamma-Gamma to calculate CLV."
+    ],
+    "imageSrc": "history/accenture.png"
+  }
+]
