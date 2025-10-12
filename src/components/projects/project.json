@@ -13,7 +13,7 @@
       "JWT",
       "Tailwind CSS"
     ],
-    "demo": "https://pixen.live/",
+    "demo": "https://www.pixen.live/",
     "source": "https://github.com/siddhant-2002/pixen",
     "category": "full stack"
   },
@@ -46,7 +46,7 @@
       "Mongo DB",
       "Firebase"
     ],
-    "demo": "https://referme.netlify.app/",
+    "demo": "https://referme.tech/",
     "source": "https://github.com/siddhant-2002/referme",
     "category": "full stack"
   }

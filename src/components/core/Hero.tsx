@@ -29,9 +29,9 @@ const HeroSection: React.FC = () => {
                     className="flex items-center gap-4 w-full"
                 >
                     <motion.img
-                        src="https://placehold.co/60x60/1a1a1a/ffffff?text=SD"
+                        src="hero.png"
                         alt="Siddhant Deshmukh"
-                        className="w-10 h-10 rounded-full border-2 border-gray-700 flex-shrink-0"
+                        className="w-15 h-15 rounded-full border-2 border-gray-700 flex-shrink-0"
                         initial={{ scale: 0.6, rotate: -20 }}
                         animate={{ scale: 1, rotate: 0 }}
                         transition={{ type: 'spring', stiffness: 200, damping: 20 }}
