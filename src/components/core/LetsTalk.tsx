@@ -8,13 +8,13 @@ const MailIcon: React.FC = () => (
     </svg>
 );
 
-const InstagramIcon: React.FC = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-    </svg>
-);
+// const InstagramIcon: React.FC = () => (
+//     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
+//         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+//         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+//         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+//     </svg>
+// );
 
 const LinkedInIcon: React.FC = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
@@ -42,13 +42,12 @@ const LetsTalk: React.FC = () => {
                     <div className="flex items-center gap-4 w-full mb-6">
                         
                         <p className="text-gray-400 max-w-lg text-base sm:text-lg">
-                            Interested in working together or have a question? Reach out — I help teams and founders ship great products and solve UX & engineering challenges.
-                        </p>
+Got an idea, question, or project in mind? Feel free to reach out — I love building cool stuff and solving real-world problems with code.                        </p>
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-2">
                         {/* Email Button */}
                         <a
-                            href="mailto:deepika.iyer1404@gmail.com"
+                            href="mailto:siddeshmukh711@gmail.com"
                             className="flex items-center gap-3 bg-neutral-900/30 border border-gray-700/60 text-gray-100 rounded-lg px-4 py-2.5 hover:bg-neutral-900/40 hover:scale-[1.02] transition-all duration-200"
                             aria-label="Email Siddhant"
                         >
@@ -57,19 +56,19 @@ const LetsTalk: React.FC = () => {
                         </a>
                         {/* Resume Button */}
                         <a
-                            href="#"
+                            href="https://drive.google.com/drive/folders/1ceZ4Fe6iXk8Q0p3xWhRcD7nHfp67n9oo?usp=drive_link"
                             className="bg-neutral-900/30 border border-gray-700/60 text-gray-100 rounded-lg px-4 py-2.5 hover:bg-neutral-900/40 hover:scale-[1.02] transition-all duration-200"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                         >
                             <span className="text-sm font-medium">Resume</span>
                         </a>
                         {/* Instagram Button */}
-                        <a href="#" className="bg-neutral-900/30 border border-gray-700/60 text-gray-100 rounded-lg p-3 hover:bg-neutral-900/40 transition-all duration-200" aria-label="Instagram">
+                        {/* <a href="#" className="bg-neutral-900/30 border border-gray-700/60 text-gray-100 rounded-lg p-3 hover:bg-neutral-900/40 transition-all duration-200" aria-label="Instagram">
                             <InstagramIcon />
-                        </a>
+                        </a> */}
                         {/* LinkedIn Button */}
-                        <a href="#" className="bg-neutral-900/30 border border-gray-700/60 text-gray-100 rounded-lg p-3 hover:bg-neutral-900/40 transition-all duration-200" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/sid-deshmukh/" target='_blank' className="bg-neutral-900/30 border border-gray-700/60 text-gray-100 rounded-lg p-3 hover:bg-neutral-900/40 transition-all duration-200" aria-label="LinkedIn">
                             <LinkedInIcon />
                         </a>
                     </div>

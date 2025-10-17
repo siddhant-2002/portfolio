@@ -15,7 +15,7 @@ const Links = () => {
         {/* Left column (LinkedIn + Codeforces stacked) */}
         <div className="flex flex-col gap-4 md:col-span-1">
           <a
-            href="#"
+            href="https://www.linkedin.com/in/sid-deshmukh/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500/20 hover:bg-blue-500/30 rounded-xl flex items-center justify-center gap-3 h-16 sm:h-20 transition-all duration-300 hover:scale-105 w-full"
@@ -31,7 +31,7 @@ const Links = () => {
           </a>
 
           <a
-            href="#"
+            href="https://codeforces.com/profile/sid_2002"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-red-500/20 hover:bg-red-500/30 rounded-xl flex items-center justify-center gap-3 h-16 sm:h-20 transition-all duration-300 hover:scale-105 w-full"
@@ -50,7 +50,7 @@ const Links = () => {
         {/* Middle section (3 smaller cards in grid) */}
         <div className="grid grid-cols-2 gap-4 md:col-span-2">
           <a
-            href="#"
+            href="https://leetcode.com/u/sid_711/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-yellow-500/20 hover:bg-yellow-500/30 rounded-xl flex items-center justify-center gap-3 h-16 sm:h-20 transition-all duration-300 hover:scale-105 w-full"
@@ -66,7 +66,7 @@ const Links = () => {
           </a>
 
           <a
-            href="#"
+            href="https://www.codechef.com/users/bug_711"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-500/20 hover:bg-gray-500/30 rounded-xl flex items-center justify-center gap-3 h-16 sm:h-20 transition-all duration-300 hover:scale-105 w-full"
@@ -82,7 +82,7 @@ const Links = () => {
           </a>
 
           <a
-            href="#"
+            href="https://www.naukri.com/code360/profile/siddeshmukh"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-orange-500/20 hover:bg-orange-500/30 rounded-xl flex items-center justify-center gap-3 h-16 sm:h-20 transition-all duration-300 hover:scale-105 col-span-2 w-full"
@@ -101,7 +101,7 @@ const Links = () => {
         {/* Right GitHub box */}
         <div className="md:col-span-1 flex items-stretch justify-center">
           <a
-            href="#"
+            href="https://github.com/siddhant-2002"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white/20 hover:bg-white/30 rounded-xl flex flex-col items-center justify-center gap-3 h-16 sm:h-20 md:h-full w-full transition-all duration-300 hover:scale-105"

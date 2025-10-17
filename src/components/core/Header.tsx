@@ -40,7 +40,11 @@ const Header = () => {
       <div className="w-full mx-auto flex items-center justify-between">
         {/* Left side: Name and growing line */}
         <div className="flex items-center w-full min-w-0">
-          <h1 className="text-[150%] font-light  whitespace-nowrap tracking-wide">Siddhant Deshmukh</h1>
+          <h1 className="text-[150%] font-light whitespace-nowrap tracking-wide">
+            <a href="/" className="cursor-pointer hover:text-gray-300 transition-colors duration-300">
+              Siddhant Deshmukh
+            </a>
+          </h1>
           <div
             className="flex-grow h-0.5 ml-4 sm:ml-6 mr-4 sm:mr-6 bg-gray-500 transition-transform duration-200 ease-out"
             style={{
@@ -51,20 +55,20 @@ const Header = () => {
         </div>
         
         {/* Right side: Navigation */}
-        <nav className="flex-shrink-0">
-          <ul className="flex items-center space-x-4 sm:space-x-6 lg:space-x-10 text-base sm:text-lg font-medium tracking-wide">
+        <nav className="flex-shrink-0 ">
+          <ul className="flex items-center space-x-4 sm:space-x-6 lg:space-x-10 text-base sm:text-lg font-medium tracking-wide ">
             <li className="hidden sm:block">
-              <a href="#work" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="/projects" className="text-gray-300 hover:text-white transition-colors duration-300">
                 Work
               </a>
             </li>
             <li className="hidden sm:block">
-              <a href="#about" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a href="/" className="text-gray-300 hover:text-white transition-colors duration-300">
                 About
               </a>
             </li>
             <li className="flex items-start">
-              <a href="#contact" className="text-gray-300 hover:text-white font-light text-[150%] -mt-1 transition-colors duration-300">
+              <a href="https://drive.google.com/drive/folders/1ceZ4Fe6iXk8Q0p3xWhRcD7nHfp67n9oo?usp=drive_link" className="text-gray-300 hover:text-white font-light text-[150%] -mt-1 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
                Resume
               </a>
             </li>
