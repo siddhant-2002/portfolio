@@ -1,7 +1,7 @@
  [
   {
     "title": "Pixen",
-    "imageSrc": "projects/pixen.png",
+    "imageSrc": "/pixen.png",
     "description": [
       "A freelancing service platform built to connect clients with professional developers and designers. Pixen enables project listing, bidding, real-time chat, and secure delivery workflows."
     ],
@@ -12,7 +12,7 @@
   },
   {
     "title": "LabourHub",
-    "imageSrc": "projects/labour.png",
+    "imageSrc": "/laborhub.png",
     "description": [
       "This platform is a game-changer for daily wage workers, connecting them to job providers seamlessly."
     ],
@@ -23,7 +23,7 @@
   },
   {
     "title": "Refer Me",
-    "imageSrc": "projects/referme.png",
+    "imageSrc": "/referme.png",
     "description": "An online platform for engineering students, built using the MERN stack and utilizing Firebase and MongoDB for database storage",
     "skills": ["React", "Express", "Node", "Mongo DB", "Firebase"],
     "demo": "https://referme.tech/",
@@ -32,7 +32,7 @@
   },
   {
     "title": "BeyondChat",
-    "imageSrc": "projects/beyondchat.png",
+    "imageSrc": "/chatbot.png",
     "description": [
       "A user-friendly frontend interface integrating web scraping capabilities and a chatbot for seamless data extraction and user interaction."
     ],
@@ -52,7 +52,7 @@
   },
   {
     "title": "Random GIF Generator",
-    "imageSrc": "projects/randomgif.png",
+    "imageSrc": "/public/random meme.png",
     "description": [
       "A fun web app that fetches and displays random GIFs using the Giphy API."
     ],
@@ -72,7 +72,7 @@
   },
   {
     "title": "Profile-MD",
-    "imageSrc": "projects/profilemd.png",
+    "imageSrc": "/public/profileexplore.png",
     "description": [
       "A frontend for a profile management system that renders developer profiles from Markdown content."
     ],

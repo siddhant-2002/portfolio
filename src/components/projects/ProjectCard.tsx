@@ -80,15 +80,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
         if ((e.target as HTMLElement).closest('a, button')) return;
         document.dispatchEvent(new CustomEvent('open-project-modal', { detail: project }));
       }}
-      className={`group relative flex flex-col justify-between rounded-2xl bg-black/20 border border-gray-800 overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:border-gray-700 hover:scale-[1.02] hover:shadow-gray-800/20 cursor-pointer ${className}`}
+      className={`group relative flex flex-col justify-between rounded-2xl bg-black/20 border border-gray-300 overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:border-gray-700 hover:scale-[1.02] hover:shadow-gray-800/20 cursor-pointer ${className}`}
     >
       <div className="absolute inset-0 z-0">
         <img
           src={project.imageSrc}
           alt={project.title}
-          className="w-full h-full object-cover opacity-5 group-hover:opacity-10 transition-opacity duration-300"
+          className="w-full h-full object-cover opacity-5 group-hover:opacity-80 transition-opacity duration-300"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
       </div>
 
       <div className="relative z-10 p-3 sm:p-4 flex flex-col h-full">
