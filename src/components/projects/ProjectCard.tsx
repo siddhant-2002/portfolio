@@ -80,56 +80,56 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
         if ((e.target as HTMLElement).closest('a, button')) return;
         document.dispatchEvent(new CustomEvent('open-project-modal', { detail: project }));
       }}
-      className={`group relative flex flex-col justify-between rounded-2xl bg-black/20 border border-gray-300 overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:border-gray-700 hover:scale-[1.02] hover:shadow-gray-800/20 cursor-pointer ${className}`}
+      className={`group relative flex flex-col justify-between rounded-3xl bg-gradient-to-br from-gray-900/80 to-black/60 border border-gray-700/50 overflow-hidden shadow-xl transition-all duration-500 ease-out hover:border-gray-600/70 hover:shadow-2xl hover:shadow-purple-500/10 cursor-pointer backdrop-blur-sm ${className}`}
     >
       <div className="absolute inset-0 z-0">
         <img
           src={project.imageSrc}
           alt={project.title}
-          className="w-full h-full object-cover opacity-5 group-hover:opacity-80 transition-opacity duration-300"
+          className="w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20"></div>
       </div>
 
-      <div className="relative z-10 p-3 sm:p-4 flex flex-col h-full">
+      <div className="relative z-10 p-4 sm:p-5 lg:p-6 flex flex-col h-full">
         <div className="flex-grow">
-          <div className="flex justify-between items-start mb-2">
-            <h3 className="text-lg lg:text-xl font-light text-white transition-colors duration-300 group-hover:text-white/90">
+          <div className="flex justify-between items-start mb-3">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-light text-white transition-all duration-300 group-hover:text-white/95 leading-tight">
               {project.title}
             </h3>
-            <span className="flex-shrink-0 ml-2 px-2 py-0.5 bg-white/10 text-white/80 text-[15px] font-light rounded-sm capitalize">
+            <span className="flex-shrink-0 ml-3 px-3 py-1 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-white/80 text-xs sm:text-sm font-light rounded-full capitalize backdrop-blur-sm">
               {project.category}
             </span>
           </div>
 
-          <p className="text-white/70 mb-2 leading-relaxed line-clamp-2 group-hover:line-clamp-none font-light">
+          <p className="text-white/70 mb-3 leading-relaxed line-clamp-3 group-hover:line-clamp-none font-light text-sm sm:text-base transition-all duration-300">
             {descriptionText}
           </p>
         </div>
 
         <div className="mt-auto">
-          <div className="flex flex-wrap gap-1.5 mb-2">
+          <div className="flex flex-wrap gap-2 mb-4">
             {project.skills.slice(0, 3).map((skill) => (
               <span
                 key={skill}
-                className="px-2 py-0.5 bg-white/10 text-white/80 text-[15px] font-light rounded-sm"
+                className="px-3 py-1 bg-white/10 hover:bg-white/20 text-white/80 text-xs sm:text-sm font-light rounded-full border border-white/20 transition-all duration-300 hover:scale-105"
               >
                 {skill}
               </span>
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-4 border-t border-white/10">
             <div className="flex flex-wrap items-center gap-2">
               {project.demo && (
                 <a
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-2 py-1 bg-blue-600/30 hover:bg-blue-600/50 text-white/90 hover:text-white rounded-md transition-all duration-300 text-sm font-light backdrop-blur-sm"
+                  className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-blue-600/20 to-blue-700/20 hover:from-blue-600/30 hover:to-blue-700/30 text-white/90 hover:text-white rounded-xl transition-all duration-300 text-sm font-light border border-blue-500/30 hover:border-blue-400/50 hover:scale-105 backdrop-blur-sm"
                 >
-                  <ExternalLinkIcon className="w-3.5 h-3.5" />
-                  <span>Live Demo</span>
+                  <ExternalLinkIcon className="w-4 h-4" />
+                  <span>Demo</span>
                 </a>
               )}
               {project.source && (
@@ -137,9 +137,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
                   href={project.source}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-2 py-1 bg-gray-600/30 hover:bg-gray-600/50 text-white/90 hover:text-white rounded-md transition-all duration-300 text-sm font-light backdrop-blur-sm"
+                  className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-gray-600/20 to-gray-700/20 hover:from-gray-600/30 hover:to-gray-700/30 text-white/90 hover:text-white rounded-xl transition-all duration-300 text-sm font-light border border-gray-500/30 hover:border-gray-400/50 hover:scale-105 backdrop-blur-sm"
                 >
-                  <GithubIcon className="w-3.5 h-3.5" />
+                  <GithubIcon className="w-4 h-4" />
                   <span>Source</span>
                 </a>
               )}
@@ -149,10 +149,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
                 e.stopPropagation();
                 document.dispatchEvent(new CustomEvent('open-project-modal', { detail: project }));
               }}
-              className="flex items-center gap-1.5 px-2 py-1 bg-purple-600/30 hover:bg-purple-600/50 text-white/90 hover:text-white rounded-md transition-all duration-300 text-sm font-light backdrop-blur-sm"
+              className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-600/20 to-purple-700/20 hover:from-purple-600/30 hover:to-purple-700/30 text-white/90 hover:text-white rounded-xl transition-all duration-300 text-sm font-light border border-purple-500/30 hover:border-purple-400/50 hover:scale-105 backdrop-blur-sm"
             >
-              <InfoIcon className="w-3.5 h-3.5" />
-              <span>View Details</span>
+              <InfoIcon className="w-4 h-4" />
+              <span>Details</span>
             </button>
           </div>
         </div>

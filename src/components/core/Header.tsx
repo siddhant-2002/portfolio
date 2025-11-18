@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex items-center w-full min-w-0">
           <h1 className="text-[150%] font-light whitespace-nowrap tracking-wide">
             <a href="/" className="cursor-pointer hover:text-gray-300 transition-colors duration-300">
-              Siddhant Deshmukh
+              Siddhant<span className="hidden sm:inline"> Deshmukh</span>
             </a>
           </h1>
           <div
@@ -68,7 +68,7 @@ const Header = () => {
               </a>
             </li>
             <li className="flex items-start">
-              <a href="https://drive.google.com/drive/folders/1ceZ4Fe6iXk8Q0p3xWhRcD7nHfp67n9oo?usp=drive_link" className="text-gray-300 hover:text-white font-light text-[150%] -mt-1 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/drive/folders/1ceZ4Fe6iXk8Q0p3xWhRcD7nHfp67n9oo?usp=drive_link" className="text-gray-300 hover:text-white font-light text-xl  -mt-1 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
                Resume
               </a>
             </li>

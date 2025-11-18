@@ -143,7 +143,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, isOpen })
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4 overflow-y-auto">
       <div 
         ref={modalRef}
-        className="bg-gray-900 border border-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        className="bg-gray-900 border border-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
       >
         <div className="relative">
           <div className="h-56 sm:h-64 md:h-80 overflow-hidden">
@@ -291,7 +291,7 @@ const AllProjects: React.FC = () => {
   });
 
   return (
-    <main className="min-h-screen bg-black text-white pt-12 pb-4 px-4 sm:pt-16 sm:pb-6 sm:px-6 md:pt-20 md:pb-8 md:px-8 lg:pt-24 lg:pb-12 lg:px-12">
+    <main className="min-h-screen bg-black text-white pt-20 pb-6 px-4 sm:pt-24 sm:pb-8 sm:px-6 md:pt-28 md:pb-10 md:px-8 lg:pt-32 lg:pb-12 lg:px-12">
       <div className="max-w-5xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-white">

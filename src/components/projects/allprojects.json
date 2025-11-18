@@ -43,7 +43,7 @@
   },
   {
     "title": "DevLink-Connect",
-    "imageSrc": "projects/devlink.png",
+    "imageSrc": "devlink.png",
     "description": "A developer connection platform to facilitate networking among coding professionals.",
     "skills": ["React", "Express", "Node", "MongoDB"],
     "demo": "https://devlink-connect.netlify.app/",
@@ -52,7 +52,7 @@
   },
   {
     "title": "Random GIF Generator",
-    "imageSrc": "/public/random meme.png",
+    "imageSrc": "/random meme.png",
     "description": [
       "A fun web app that fetches and displays random GIFs using the Giphy API."
     ],
@@ -72,7 +72,7 @@
   },
   {
     "title": "Profile-MD",
-    "imageSrc": "/public/profileexplore.png",
+    "imageSrc": "/profileexplore.png",
     "description": [
       "A frontend for a profile management system that renders developer profiles from Markdown content."
     ],
@@ -83,7 +83,7 @@
   },
   {
     "title": "OSimulate",
-    "imageSrc": "projects/osimulate.png",
+    "imageSrc": "osimulate.png",
     "description": "Simulation of key operating system algorithms in C++ for educational use.",
     "skills": ["C++", "Algorithms"],
     "demo": "https://github.com/siddhant-2002/OSimulate",
@@ -92,7 +92,7 @@
   },
   {
     "title": "Hotel Management System",
-    "imageSrc": "projects/hotel.png",
+    "imageSrc": "hotel.png",
     "description": [
       "A command-line-based hotel management system written in Python. Supports booking, food ordering, and payments."
     ],

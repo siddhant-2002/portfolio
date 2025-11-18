@@ -34,7 +34,7 @@ function App() {
               <About />
               <TechStack />
               <Projects />
-              <Timeline />
+              {/* <Timeline /> */}
               <Community />
               <Links />
               <LetsTalk />
