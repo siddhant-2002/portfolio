@@ -5,6 +5,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -14,6 +15,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(50%);
   }
@@ -25,4 +27,54 @@
 
 .animate-marquee-right {
   animation: marquee-right linear infinite;
+}
+
+/* Custom Animations for Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-in {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.zoom-in {
+  animation-name: zoomIn;
+}
+
+/* Custom Scrollbar - Hide scrollbar while maintaining scroll functionality */
+.custom-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
 }

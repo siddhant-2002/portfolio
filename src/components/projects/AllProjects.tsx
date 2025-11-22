@@ -1,113 +1,40 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import PROJECTS from './allprojects.json';
 import ProjectCard from './ProjectCard';
 
-/* ----------------------------- ICON COMPONENTS ----------------------------- */
-interface IconProps {
-  className?: string;
-}
-
-const ExternalLinkIcon: React.FC<IconProps> = ({ className }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-    <polyline points="15 3 21 3 21 9"></polyline>
-    <line x1="10" y1="14" x2="21" y2="3"></line>
-  </svg>
-);
-
-const GithubIcon: React.FC<IconProps> = ({ className }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-  </svg>
-);
-
-
-
-/* ----------------------------- TYPE DEFINITIONS ----------------------------- */
+/* ----------------------------- TYPES ----------------------------- */
 export interface Project {
   title: string;
   imageSrc: string;
   description: string | string[];
   skills: string[];
   demo: string;
-  source: string;
+  source?: string;
   category: string;
 }
 
-
-/* ----------------------------- DYNAMIC GRID LAYOUT GENERATOR ----------------------------- */
-/**
- * This function generates grid layouts dynamically based on project index and category.
- * This allows the grid to adapt automatically when new projects are added.
- */
-const getGridLayout = (index: number, category: string, totalInCategory: number): string => {
-  // First project of each category should be featured (bigger size)
-  if (index === 0) return "md:col-span-3 md:row-span-2";
+/* ----------------------------- GRID LAYOUT ----------------------------- */
+const getGridLayout = (index: number): string => {
+  // User requested a 10-column grid.
+  // "First 4 and 5" interpreted as:
+  // Row 1: 4 cols + 6 cols (Total 10)
+  // Row 2: 5 cols + 5 cols (Total 10)
+  // Row 3: 6 cols + 4 cols (Total 10) - Variation
+  const pattern = index % 6;
   
-  // Last project in a category with odd count gets special treatment
-  if (index === totalInCategory - 1 && totalInCategory % 2 === 1) {
-    return "md:col-span-3 md:row-span-1"; // Make last item wider if odd count
+  switch(pattern) {
+    case 0: return "md:col-span-9 md:row-span-1"; // 40%
+    case 1: return "md:col-span-11 md:row-span-1"; // 60%
+    case 2: return "md:col-span-10 md:row-span-1"; // 50%
+    case 3: return "md:col-span-10 md:row-span-1"; // 50%
+    case 4: return "md:col-span-11 md:row-span-1"; // 60%
+    case 5: return "md:col-span-9 md:row-span-1"; // 40%
+    default: return "md:col-span-5 md:row-span-1";
   }
-  
-  // Patterns based on position within the grid to create visual interest
-  const position = index % 6; // Create a repeating pattern every 6 items
-  
-  // Use different patterns based on category for visual variety
-  if (category === "full stack") {
-    if (position === 1) return "md:col-span-3 md:row-span-1";
-    if (position === 2) return "md:col-span-3 md:row-span-1";
-    if (position === 3) return "md:col-span-3 md:row-span-1";
-    if (position === 4) return "md:col-span-3 md:row-span-1";
-    if (position === 5) return "md:col-span-3 md:row-span-1";
-  } else if (category === "frontend") {
-    if (position === 1) return "md:col-span-3 md:row-span-1";
-    if (position === 2) return "md:col-span-3 md:row-span-1";
-    if (position === 3) return "md:col-span-3 md:row-span-1";
-    if (position === 4) return "md:col-span-3 md:row-span-1";
-    if (position === 5) return "md:col-span-3 md:row-span-1";
-  } else if (category === "api fetch" || category === "other") {
-    if (position === 1) return "md:col-span-3 md:row-span-1";
-    if (position === 2) return "md:col-span-3 md:row-span-1";
-    if (position === 3) return "md:col-span-3 md:row-span-1";
-    if (position === 4) return "md:col-span-3 md:row-span-1";
-    if (position === 5) return "md:col-span-3 md:row-span-1";
-  }
-  
-  // Use a balanced default pattern for other categories or positions
-  // This ensures all added projects will get a sensible layout
-  const defaultPatterns = [
-    "md:col-span-3 md:row-span-1",
-    "md:col-span-3 md:row-span-1",
-    "md:col-span-3 md:row-span-1", 
-    "md:col-span-3 md:row-span-1",
-    "md:col-span-3 md:row-span-1",
-    "md:col-span-3 md:row-span-1"
-  ];
-  
-  return defaultPatterns[position] || "md:col-span-3 md:row-span-1";
 };
 
-
-
-/* ----------------------------- PROJECT MODAL COMPONENT ----------------------------- */
+/* ----------------------------- MODAL ----------------------------- */
 interface ProjectModalProps {
   project: Project | null;
   onClose: () => void;
@@ -117,7 +44,6 @@ interface ProjectModalProps {
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, isOpen }) => {
   const modalRef = React.useRef<HTMLDivElement>(null);
   
-  // Close modal when clicking outside
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
@@ -127,7 +53,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, isOpen })
     
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
-      // Prevent scrolling when modal is open
       document.body.style.overflow = 'hidden';
     }
     
@@ -140,50 +65,47 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, isOpen })
   if (!project || !isOpen) return null;
   
   return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4 overflow-y-auto">
+    <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-[100] p-4 font-['Inter',_sans-serif]">
       <div 
         ref={modalRef}
-        className="bg-gray-900 border border-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+        className="bg-neutral-900 border border-neutral-800 rounded-2xl max-w-5xl w-full max-h-[85vh] overflow-y-auto shadow-2xl animate-in fade-in zoom-in duration-300 custom-scrollbar"
       >
-        <div className="relative">
-          <div className="h-56 sm:h-64 md:h-80 overflow-hidden">
-            <img 
-              src={project.imageSrc} 
-              alt={project.title} 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-          </div>
+        <div className="relative h-64 sm:h-80 md:h-96">
+          <img 
+            src={project.imageSrc} 
+            alt={project.title} 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent"></div>
           
           <button 
             onClick={onClose}
-            className="absolute top-4 right-4 bg-black/50 text-white rounded-full p-2 hover:bg-black/80 transition-colors"
+            className="absolute top-6 right-6 bg-black/50 hover:bg-black/80 text-white rounded-full p-2 transition-all duration-300 backdrop-blur-sm border border-white/10"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
         </div>
         
-        <div className="p-6">
-          <div className="flex flex-wrap justify-between items-start gap-4 mb-6">
+        <div className="p-8 sm:p-10">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-light text-white mb-2">{project.title}</h2>
-              <div className="inline-block px-3 py-1 bg-purple-600/30 text-white/90 rounded-md text-sm font-light capitalize">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 tracking-tight">{project.title}</h2>
+              <div className="inline-flex items-center px-3 py-1 bg-neutral-800 border border-neutral-700 text-gray-300 rounded-md text-sm font-medium capitalize">
                 {project.category}
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-2">
+            <div className="flex gap-3">
               {project.demo && (
                 <a
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600/30 hover:bg-blue-600/50 text-white rounded-md transition-all duration-300 text-sm font-light"
+                  className="flex items-center gap-2 px-5 py-2.5 bg-white text-black hover:bg-gray-200 rounded-xl transition-all duration-300 text-sm font-bold"
                 >
-                  <ExternalLinkIcon className="w-4 h-4" />
                   <span>Live Demo</span>
                 </a>
               )}
@@ -192,38 +114,43 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, isOpen })
                   href={project.source}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-600/30 hover:bg-gray-600/50 text-white rounded-md transition-all duration-300 text-sm font-light"
+                  className="flex items-center gap-2 px-5 py-2.5 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-all duration-300 text-sm font-medium border border-neutral-700"
                 >
-                  <GithubIcon className="w-4 h-4" />
                   <span>Source Code</span>
                 </a>
               )}
             </div>
           </div>
           
-          <div className="mb-6">
-            <h3 className="text-lg text-white/90 mb-2 font-light">Description</h3>
-            <div className="text-white/70 space-y-2 font-light">
-              {Array.isArray(project.description) 
-                ? project.description.map((paragraph, idx) => (
-                    <p key={idx}>{paragraph}</p>
-                  ))
-                : <p>{project.description}</p>
-              }
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="lg:col-span-2 space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-3">About Project</h3>
+                <div className="text-gray-400 space-y-4 leading-relaxed">
+                  {Array.isArray(project.description) 
+                    ? project.description.map((paragraph, idx) => (
+                        <p key={idx}>{paragraph}</p>
+                      ))
+                    : <p>{project.description}</p>
+                  }
+                </div>
+              </div>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="text-lg text-white/90 mb-2 font-light">Technologies</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1 bg-white/10 text-white/80 text-sm font-light rounded-md"
-                >
-                  {skill}
-                </span>
-              ))}
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-3">Technologies</h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 bg-neutral-800 text-gray-300 text-sm font-medium rounded-md border border-neutral-700"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,123 +162,93 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, isOpen })
 /* ----------------------------- MAIN COMPONENT ----------------------------- */
 const AllProjects: React.FC = () => {
   const [activeFilter, setActiveFilter] = React.useState<string | null>(null);
-  const [filteredProjects, setFilteredProjects] = React.useState(PROJECTS);
   const [selectedProject, setSelectedProject] = React.useState<Project | null>(null);
   
-  // Filter projects when activeFilter changes
-  React.useEffect(() => {
-    if (!activeFilter) {
-      setFilteredProjects(PROJECTS);
-    } else {
-      setFilteredProjects(
-        PROJECTS.filter((project) => project.category.toLowerCase() === activeFilter.toLowerCase())
-      );
-    }
+  const filteredProjects = React.useMemo(() => {
+    if (!activeFilter) return PROJECTS;
+    return PROJECTS.filter((project) => project.category.toLowerCase() === activeFilter.toLowerCase());
   }, [activeFilter]);
   
-  // Handle the custom event to open project modal
   React.useEffect(() => {
     const handleOpenProjectModal = (e: CustomEvent<Project>) => {
       setSelectedProject(e.detail);
     };
     
-    // TypeScript doesn't know about our custom event, so we need to cast
     document.addEventListener('open-project-modal', handleOpenProjectModal as EventListener);
-    
     return () => {
       document.removeEventListener('open-project-modal', handleOpenProjectModal as EventListener);
     };
   }, []);
-  
-  // Handle filter button click
-  const handleFilterClick = (filter: string) => {
-    setActiveFilter(activeFilter === filter ? null : filter);
-  };
-  
-  // Group projects by category to determine position within each category
-  const projectsByCategory = filteredProjects.reduce((acc, project) => {
-    if (!acc[project.category]) {
-      acc[project.category] = [];
-    }
-    acc[project.category].push(project);
-    return acc;
-  }, {} as Record<string, typeof filteredProjects>);
 
-  // Map filtered projects to their dynamic grid layout positions
-  const projectsWithLayout = filteredProjects.map((project) => {
-    // Find the position of this project within its category group
-    const categoryProjects = projectsByCategory[project.category];
-    const categoryIndex = categoryProjects.findIndex(p => p.title === project.title);
-    const totalInCategory = categoryProjects.length;
-    
-    return {
-      ...project,
-      layout: getGridLayout(categoryIndex, project.category, totalInCategory)
-    };
-  });
+  const categories = ['full stack', 'frontend', 'api fetch', 'other'];
 
   return (
-    <main className="min-h-screen bg-black text-white pt-20 pb-6 px-4 sm:pt-24 sm:pb-8 sm:px-6 md:pt-28 md:pb-10 md:px-8 lg:pt-32 lg:pb-12 lg:px-12">
-      <div className="max-w-5xl mx-auto">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-white">
-            Project Showcase
-          </h1>
-          <p className="mt-4 text-white/70 max-w-2xl mx-auto text-lg font-light">
-            A curated collection of my work, from full-stack applications to fun experiments, presented in a beautiful bento grid.
-          </p>
+    <main className="min-h-screen bg-black text-white pt-24 pb-20 px-6 sm:px-8 md:px-12 font-['Inter',_sans-serif] relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_50%_-200px,#3e3e3e2a,transparent)]"></div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
+        <header className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-500">
+                Selected Works
+              </span>
+            </h1>
+            <p className="mt-4 text-gray-400 max-w-xl text-lg leading-relaxed">
+              A curated collection of projects pushing the boundaries of web development and design.
+            </p>
+          </div>
+          
+          {/* Filters */}
+          <div className="flex flex-wrap items-center gap-2">
+            <button 
+              className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 border ${
+                activeFilter === null 
+                  ? 'bg-white text-black border-white' 
+                  : 'bg-neutral-900/50 text-gray-400 border-neutral-800 hover:border-neutral-600 hover:text-white backdrop-blur-sm'
+              }`}
+              onClick={() => setActiveFilter(null)}
+            >
+              All
+            </button>
+            {categories.map((category) => (
+              <button 
+                key={category}
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 border capitalize ${
+                  activeFilter === category 
+                    ? 'bg-white text-black border-white' 
+                    : 'bg-neutral-900/50 text-gray-400 border-neutral-800 hover:border-neutral-600 hover:text-white backdrop-blur-sm'
+                }`}
+                onClick={() => setActiveFilter(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </header>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 mb-12 px-4">
-          <button 
-            className={`category-btn text-lg sm:text-xl md:text-2xl font-light transition-all duration-300 focus:outline-none ${activeFilter === null ? 'text-white border-b border-white pb-1' : 'text-gray-400 hover:text-white hover:border-b hover:border-gray-400 hover:pb-1'}`}
-            onClick={() => setActiveFilter(null)}
-          >
-            All
-          </button>
-          <span className="text-gray-600 text-xl">•</span>
-          <button 
-            className={`category-btn text-lg sm:text-xl md:text-2xl font-light transition-all duration-300 focus:outline-none ${activeFilter === 'full stack' ? 'text-white border-b border-white pb-1' : 'text-gray-400 hover:text-white hover:border-b hover:border-gray-400 hover:pb-1'}`}
-            onClick={() => handleFilterClick('full stack')}
-          >
-            Full Stack
-          </button>
-          <span className="text-gray-600 text-xl">•</span>
-          <button 
-            className={`category-btn text-lg sm:text-xl md:text-2xl font-light transition-all duration-300 focus:outline-none ${activeFilter === 'frontend' ? 'text-white border-b border-white pb-1' : 'text-gray-400 hover:text-white hover:border-b hover:border-gray-400 hover:pb-1'}`}
-            onClick={() => handleFilterClick('frontend')}
-          >
-            Frontend
-          </button>
-          <span className="text-gray-600 text-xl">•</span>
-          <button 
-            className={`category-btn text-lg sm:text-xl md:text-2xl font-light transition-all duration-300 focus:outline-none ${activeFilter === 'api fetch' ? 'text-white border-b border-white pb-1' : 'text-gray-400 hover:text-white hover:border-b hover:border-gray-400 hover:pb-1'}`}
-            onClick={() => handleFilterClick('api fetch')}
-          >
-            API Fetch
-          </button>
-          <span className="text-gray-600 text-xl">•</span>
-          <button 
-            className={`category-btn text-lg sm:text-xl md:text-2xl font-light transition-all duration-300 focus:outline-none ${activeFilter === 'other' ? 'text-white border-b border-white pb-1' : 'text-gray-400 hover:text-white hover:border-b hover:border-gray-400 hover:pb-1'}`}
-            onClick={() => handleFilterClick('other')}
-          >
-            Other
-          </button>
-        </div>
-
-        
-        
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6 md:auto-rows-[200px] lg:auto-rows-[250px] transition-all duration-500">
-          {projectsWithLayout.map((project) => (
-            <ProjectCard
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-20 gap-6 auto-rows-[300px] grid-flow-dense">
+          {filteredProjects.map((project, index) => (
+            <motion.div
               key={project.title}
-              project={project}
-              className={`transform transition-all duration-500 ${project.layout}`}
-            />
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className={getGridLayout(index)}
+            >
+              <ProjectCard
+                project={project}
+                className="h-full w-full"
+              />
+            </motion.div>
           ))}
         </div>
         
-        {/* Project Details Modal */}
         <ProjectModal 
           project={selectedProject} 
           isOpen={!!selectedProject} 

@@ -11,6 +11,16 @@
     "category": "full stack"
   },
   {
+    "title": "Collex",
+    "imageSrc": "/collex.png",
+    "description": [
+      "A campus-exclusive marketplace platform for students to buy and sell preloved items like textbooks, electronics, furniture, and essentials within their college community. Features verified listings, quick exchanges, and student-friendly pricing for a secure, convenient trading experience."
+    ],
+    "skills": ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+    "demo": "https://www.collex.app/",
+    "category": "full stack"
+  },
+  {
     "title": "LabourHub",
     "imageSrc": "/laborhub.png",
     "description": [

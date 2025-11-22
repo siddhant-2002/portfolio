@@ -13,16 +13,14 @@ interface ProjectItemProps {
 
 const projectData: ProjectItemProps[] = [
  {
-    "title": "Pixen",
-    "imageSrc": "pixen.png",
-    "smalldescription": " A full-stack platform for a digital agency with CMS, blogs, and portfolio dashboard.",
-    "description": "Pixen is a full-stack web platform built for a digital agency to manage and showcase its portfolio, blogs, and client testimonials through an integrated dashboard. The platform allows administrators to upload new projects, publish case studies, share blog content, and display client feedback — all dynamically rendered on the main website.",
+    "title": "Collex",
+    "imageSrc": "collex.png",
+    "smalldescription": "A campus-exclusive marketplace for students to buy, sell, and swap preloved items.",
+    "description": "A campus-exclusive marketplace platform for students to buy, sell, and swap preloved items like textbooks, electronics, furniture, and essentials within their college community. Features verified listings, quick exchanges, and student-friendly pricing for a secure, convenient trading experience.",
     "skills": ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
-    "demo": "https://www.pixen.live/",
-   
+    "demo": "https://www.collex.app/",
     "category": "full stack"
   },
-  
   {
     "title": "Refer Me",
     "imageSrc": "referme.png",

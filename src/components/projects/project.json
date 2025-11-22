@@ -1,9 +1,9 @@
 [
   {
-    "title": "Pixen",
-    "imageSrc": "projects/pixen.png",
+    "title": "Collex",
+    "imageSrc": "collex.png",
     "description": [
-      "A freelancing service platform built to connect clients with professional developers and designers. Pixen enables project listing, bidding, real-time chat, and secure delivery workflows."
+      "A campus-exclusive marketplace platform for students to buy and sell preloved items like textbooks, electronics, furniture, and essentials within their college community. Features verified listings, quick exchanges, and student-friendly pricing for a secure, convenient trading experience."
     ],
     "skills": [
       "React",
@@ -13,8 +13,7 @@
       "JWT",
       "Tailwind CSS"
     ],
-    "demo": "https://www.pixen.live/",
-    "source": "https://github.com/siddhant-2002/pixen",
+    "demo": "https://www.collex.app/",
     "category": "full stack"
   },
   {
