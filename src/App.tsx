@@ -15,7 +15,6 @@ import Footer from './components/core/Footer'
 import Community from './components/community/Community'
 import Links from './components/links/Links'
 import AllProjects from './components/projects/AllProjects'
-import CodingProfiles from './components/coding/CodingProfiles'
 
 
 function App() {
@@ -43,9 +42,6 @@ function App() {
           
           {/* Projects routes */}
           <Route path="/projects" element={<AllProjects />} />
-          
-          {/* Coding profiles route */}
-          <Route path="/coding" element={<CodingProfiles />} />
           
         </Routes>
 

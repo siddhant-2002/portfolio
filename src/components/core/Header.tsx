@@ -62,6 +62,7 @@ const Header = () => {
                 Work
               </a>
             </li>
+
             <li className="hidden sm:block">
               <a href="/" className="text-gray-300 hover:text-white transition-colors duration-300">
                 About
