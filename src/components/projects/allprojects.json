@@ -1,15 +1,14 @@
- [
-  {
-    "title": "Pixen",
-    "imageSrc": "/pixen.png",
-    "description": [
-      "A freelancing service platform built to connect clients with professional developers and designers. Pixen enables project listing, bidding, real-time chat, and secure delivery workflows."
-    ],
-    "skills": ["React", "Node.js", "MongoDB", "JWT", "Tailwind CSS"],
-    "demo": "https://www.pixen.live/",
-    "source": "https://github.com/siddhant-2002/pixen",
-    "category": "full stack"
-  },
+ [{
+    "title": "Refer Me",
+    "imageSrc": "/referme.png",
+    "description": "An online platform for engineering students, built using the MERN stack and utilizing Firebase and MongoDB for database storage",
+    "skills": ["React", "Express", "Node", "Mongo DB", "Firebase"],
+    "demo": "https://referme.tech/",
+    "source": "https://github.com/siddhant-2002",
+    "category": "full stack",
+    "live": true
+  }, 
+  
   {
     "title": "Collex",
     "imageSrc": "/collex.png",
@@ -18,7 +17,19 @@
     ],
     "skills": ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
     "demo": "https://www.collex.app/",
-    "category": "full stack"
+    "category": "full stack",
+    "live": true
+  },{
+    "title": "Pixen",
+    "imageSrc": "/pixen.png",
+    "description": [
+      "A freelancing service platform built to connect clients with professional developers and designers. Pixen enables project listing, bidding, real-time chat, and secure delivery workflows."
+    ],
+    "skills": ["React", "Node.js", "MongoDB", "JWT", "Tailwind CSS"],
+    "demo": "https://www.pixen.live/",
+    "source": "https://github.com/siddhant-2002",
+    "category": "full stack",
+    "live": true
   },
   {
     "title": "LabourHub",
@@ -31,15 +42,17 @@
     "source": "https://github.com/siddhant-2002/labourhub",
     "category": "full stack"
   },
-  {
-    "title": "Refer Me",
-    "imageSrc": "/referme.png",
-    "description": "An online platform for engineering students, built using the MERN stack and utilizing Firebase and MongoDB for database storage",
-    "skills": ["React", "Express", "Node", "Mongo DB", "Firebase"],
-    "demo": "https://referme.tech/",
-    "source": "https://github.com/siddhant-2002/referme",
-    "category": "full stack"
+   {
+    "title": "Code Orbit",
+    "imageSrc": "codeorbit.png",
+    "description": "This project is a web-based platform designed to assist engineering students in accessing ready-made and custom-built final year projects.",
+    "skills": ["React", "TypeScript", "Tailwind CSS"],
+    "demo": "https://codeorbit.info/",
+    "source": "https://github.com/siddhant-2002",
+    "category": "frontend",
+    "live": true
   },
+
   {
     "title": "BeyondChat",
     "imageSrc": "/chatbot.png",
@@ -73,7 +86,7 @@
   },
   {
     "title": "WEATHER APP",
-    "imageSrc": "projects/weather.png",
+    "imageSrc": "weather.png",
     "description": "A Node.js app fetching real-time weather data using OpenWeatherMap API and displaying it beautifully.",
     "skills": ["React", "Express", "Node", "API"],
     "demo": "https://weather-app-siddhant.netlify.app",

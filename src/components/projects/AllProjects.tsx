@@ -12,6 +12,7 @@ export interface Project {
   demo: string;
   source?: string;
   category: string;
+  live?: boolean;
 }
 
 /* ----------------------------- GRID LAYOUT ----------------------------- */
@@ -93,8 +94,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, isOpen })
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 tracking-tight">{project.title}</h2>
-              <div className="inline-flex items-center px-3 py-1 bg-neutral-800 border border-neutral-700 text-gray-300 rounded-md text-sm font-medium capitalize">
-                {project.category}
+              <div className="flex items-center gap-3">
+                <div className="inline-flex items-center px-3 py-1 bg-neutral-800 border border-neutral-700 text-gray-300 rounded-md text-sm font-medium capitalize">
+                  {project.category}
+                </div>
+                {project.live && (
+                  <div className="inline-flex items-center px-3 py-1 bg-green-800 border border-green-700 text-green-300 rounded-md text-sm font-medium">
+                    Live
+                  </div>
+                )}
               </div>
             </div>
             

@@ -108,6 +108,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
         </span>
       </div>
 
+      {/* Live Badge */}
+      {project.live && (
+        <div className="absolute top-4 left-4 z-20">
+          <span className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium text-white backdrop-blur-md border border-green-500 shadow-lg shadow-black/50 animate-pulse">
+            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+            Live
+          </span>
+        </div>
+      )}
+
       {/* Content Container */}
       <div className="relative z-20 flex h-full flex-col justify-end p-6 sm:p-8">
         <div className="transform transition-all duration-500 group-hover:-translate-y-2">
