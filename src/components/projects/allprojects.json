@@ -8,7 +8,16 @@
     "category": "full stack",
     "live": true
   }, 
-  
+  {
+    "title": "npm-portfolio",
+    "imageSrc": "/npm-portfolio.png",
+    "description": "npm-portfolio is a modern platform showcasing a collection of open-source NPM packages built for real-world web development. Designed using the MERN stack, it features a clean UI powered by React, backend services on Express/Node, and secure data storage through Firebase and MongoDB. The platform highlights modular, scalable tools tailored for developers, making it easy to explore, test, and integrate packages into your own projects.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://npm-portfolio.vercel.app/",
+    "source": "https://github.com/siddhant-2002",
+    "category": "backend",
+    "live": true
+  }, 
   {
     "title": "Collex",
     "imageSrc": "/collex.png",
